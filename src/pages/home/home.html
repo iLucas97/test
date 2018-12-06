@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{pageTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>{{devProj}}</h2>
+  <p>
+    {{text}}
+  </p>
+  <p *ngIf="!serverResponse.status">
+    <button ion-button (click)="onTest()">Test</button>
+  </p>
+  <p *ngIf="serverResponse.status">
+    <ion-card text-center>
+
+            <button ion-button clear icon-left color="green">
+              <ion-icon name="{{(serverResponse.status == 'OK') ? 'checkmark' : 'close'}}"></ion-icon>
+              {{serverResponse.status}}
+            </button>
+
+    </ion-card>
+
+  </p>
+</ion-content>

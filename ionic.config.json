@@ -1,0 +1,7 @@
+{
+  "name": "WebStatusAppClient",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
